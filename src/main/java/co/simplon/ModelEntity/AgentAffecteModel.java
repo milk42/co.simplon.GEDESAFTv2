@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 public class AgentAffecteModel  implements Serializable{
 
@@ -26,7 +27,9 @@ public class AgentAffecteModel  implements Serializable{
 	@Column(length=10)
 	private String password;
 	
+	@ManyToMany
 	private List<AffaireModel> listAffaire;
+	@ManyToMany
 	private List<PersonneModel> listPersonne;
 	
 	

@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class VehiculeModel implements Serializable{
@@ -28,8 +29,10 @@ public class VehiculeModel implements Serializable{
 	private String immatriculation;
 	@Column (length=40)
 	private String couleur;
-
+	
+	@ManyToMany
 	private List<AffaireModel> listAffaire;
+	@ManyToMany
 	private List<PersonneModel> listPersonne;
 	
 	

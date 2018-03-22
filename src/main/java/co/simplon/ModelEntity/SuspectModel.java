@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class SuspectModel implements Serializable{
@@ -29,7 +30,9 @@ public class SuspectModel implements Serializable{
 	@Column(length=10)
 	private int taille;
 	
+	@ManyToMany
 	private List<AffaireModel> listAffaire;
+	@ManyToMany
 	private List<PersonneModel> listPersonne;
 	
 	

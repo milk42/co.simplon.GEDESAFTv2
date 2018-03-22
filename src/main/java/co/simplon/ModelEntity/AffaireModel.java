@@ -8,7 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+import javax.persistence.ManyToMany;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -33,12 +33,17 @@ public class AffaireModel implements Serializable{
 	@Column(length=40)
 	private String rapport;
 
-
+	@ManyToMany
 	private List<VehiculeModel> listVehicule;
+	@ManyToMany
 	private List<ArmeModel> listArme;
+	@ManyToMany
 	private List<AgentAffecteModel> listPersonnel;
+	@ManyToMany
 	private List<SuspectModel> listSuspect;
+	@ManyToMany
 	private List<TemoinModel> listTemoin;
+	@ManyToMany
 	private List<VictimeModel> listVictime;
 	//private List<AdnModel> listAdn;
 	//private List<EmpreinteModel> listEmpreinte;

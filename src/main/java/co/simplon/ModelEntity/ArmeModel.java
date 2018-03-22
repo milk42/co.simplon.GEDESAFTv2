@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 
 @Entity
@@ -21,8 +22,9 @@ public class ArmeModel implements Serializable{
 	private String modele;
 	@Column (length=40)
 	private String type;
-
+	@ManyToMany
 	private List<AffaireModel> listAffaire;
+	@ManyToMany
 	private List<PersonneModel> listPersonne;
 	//private List<AdnModel> listAdnArme;
 	//private List<EmpreinteModel> listEmpreinteModel;
